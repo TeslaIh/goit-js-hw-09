@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* added by me */
+
+button {
+  margin: 25px 50px;
+  width: 25%;
+  height: 50px;
+  background: rgb(4, 182, 4);
+  color: black;
+  text-transform: uppercase;
+}
+
+button:disabled {
+  margin: 25px 50px;
+  background: rgb(66, 65, 65);
+  color: black;
+}
