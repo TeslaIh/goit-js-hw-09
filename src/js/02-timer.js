@@ -25,8 +25,9 @@ const options = {
       console.log(selectedDates[0]);
 
       if(selectedDates[0] < new Date()) {
-       Notiflix.Notify.warning('Please choose a date in the future! Do not look back..');
+       return Notiflix.Notify.warning('Please choose a date in the future! Do not look back..');
       } else {
+        clearInterval(intervalId);
         buttonStart.disabled = false;
       }
       
