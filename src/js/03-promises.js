@@ -5,7 +5,7 @@ form.addEventListener('submit', onSubmit);
 
 function onSubmit(event) {
   event.preventDefault();
-  let {delay, step, amount} = ev.currentTarget;
+  let {delay, step, amount} = event.currentTarget;
    delay= Number(delay.value);
    step= Number(step.value);
    amount= Number(amount.value);
