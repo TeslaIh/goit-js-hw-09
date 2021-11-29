@@ -15,7 +15,7 @@ function onSubmit(event) {
     .then(onMakeOrderSuccess)
     .catch(onMakeOrderError)
 delay += step;}
-}
+
 
     createPromise(position, delay)
     .then(({ position, delay }) => {
