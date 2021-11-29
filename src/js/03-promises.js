@@ -14,7 +14,8 @@ function onSubmit(event) {
      createPromise(position, delay)
     .then(onMakeOrderSuccess)
     .catch(onMakeOrderError)
-delay += step;}
+     delay += step;
+  }
 
 
     createPromise(position, delay)
@@ -24,7 +25,7 @@ delay += step;}
     .catch(({ position, delay }) => {
     Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
   });
-  }
+  
 }
 
 function createPromise(position, delay) {
