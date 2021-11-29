@@ -17,15 +17,12 @@ function onSubmit(event) {
      delay += step;
   }
 
-
-    createPromise(position, delay)
-    .then(({ position, delay }) => {
-    Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  })
-    .catch(({ position, delay }) => {
-    Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-  });
-  
+const onMakeOrderSuccess =({ position, delay }) =>{
+    Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
+  }
+const onMakeOrderError = ({ position, delay }) =>{
+    Notify.success(`❌ Rejected promise ${position} in ${delay}ms`)
+  }
 }
 
 function createPromise(position, delay) {
