@@ -26,8 +26,8 @@ const onMakeOrderError = ({ position, delay }) =>{
 }
 
 function createPromise(position, delay) {
-  return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
+    return new Promise((resolve, reject) => {
     
     setTimeout(() => {
       if (shouldResolve) {
