@@ -11,7 +11,11 @@ function onSubmit(event) {
    amount= Number(amount.value);
 
   for (let position = 1; position <= amount.value; position += 1){
-    delay += step;
+     createPromise(position, delay)
+    .then(onMakeOrderSuccess)
+    .catch(onMakeOrderError)
+delay += step;}
+}
 
     createPromise(position, delay)
     .then(({ position, delay }) => {
